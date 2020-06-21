@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+		var array = [10, 20, 30, 40];
+		// var copyArray = array; // 얕은복사(shallow copy]) (array가 가르키고 있는 주소값을 참조)
+	
+		// 깊은복사(deep copy) (array가 가르키고 있는 참조변수(주소값 )이 아닌 값을 복사)
+		// var copyArray = [10, 20, 30, 40]; // 이렇게 값을 직접 복사해주는 방법도 있고
+		var copyArray = []; // 배열선언 먼저 해주고
+		// 이렇게 for문을 통해서 값을 넣어주는 방법도 있음
+		for(let data of array){
+			copyArray.push(data)
+		}
+
+		var copyArray2 = [...array];	// 깊은복사
+		
+	document.write('array : ' + array + "<br>")
+	document.write('copyArray : ' + copyArray + "<br>")
+	document.write('copyArray2 : ' + copyArray2 + "<br>")
+	document.write("<hr>")
+	
+	copyArray[2] = 1000;
+	copyArray2[3] = 2000;
+	
+	document.write('array : ' + array + "<br>")
+	document.write('copyArray : ' + copyArray + "<br>")
+	document.write('copyArray2 : ' + copyArray2 + "<br>")
+</script>
+</head>
+<body>
+
+</body>
+</html>
