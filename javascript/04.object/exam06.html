@@ -4,6 +4,13 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <script>
+	/* 
+	new를 이용해서 호출할 수 있는 함수 - new 키워드로 생성가능
+	자바스크립트에서는 객체라는 개념이 없음.  
+	내 안에 prototype을 가지고 있으면 객체라고 부름.
+	new에서 저 함수를 호출하면 내부적으로 prototype을 가지게 해줌
+	원시타입만 prototype을 못씀 ex) var a = 10;
+	*/
 	//person이 object를 상속받음
 	function Person(name, phone, addr) {
 		this.name = name; // 니가 지금만든 객체에.멤버변수를 추가하자 = 날아오는 값으로
