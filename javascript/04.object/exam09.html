@@ -27,9 +27,30 @@
 		}
 	}
 	
+		class Doctor extends Person{		//이렇게쓰면 doctor prototype이 person prototype도 가리키게 됨
+		constructor(name, phone, addr, major){
+			super(name, phone, addr)
+			this._major = major
+		}
+		
+		set major(major){
+			this._major = major
+		}
+		
+		get major(){
+			return this._major
+		}
+	}
+	
 	let person = new Person('홍길동', '010-1111-2222', '서울시 서초구');
 	console.log(person)
 	person.info();
+	alert('name : ' + person.name)	//홍길동이라고 제대로 나옴 //getter 없으면 - undefined 나옴
+	//이렇게 치면 원래 클래스 안에 _name이 아니라서 undefined 나와야하는데 자동으로 getter로 가니까 제대로 나오게 됨! 
+	//사실상 getter가 호출된거 ()없이!
+
+	let doctor = new Doctor('윤다영', '010-1191-1191', '경기도 광명시', '신경외과')
+	console.log(doctor)
 </script>
 </head>
 <body>

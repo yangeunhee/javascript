@@ -37,7 +37,7 @@
 	 // 실제 for문이 싹 돌아가고 난 다음에야 출력됨(아래 예제)
 	 // 0,1,2를 출력시키기 위해 함수를 분리함
 	 // func이 끝나고 나서 set함수를 호출하고싶다 근데 i는 set만갖고있다.
-	 // 이래서 closer함수를 사용하는것
+	 // 이래서 closu함수를 사용하는것
 	 // i는 for문이 다 돌아가고 난 다음에야 찍힘
 	 var func = function(i) {
 	 return setTimeout(function() {
@@ -53,7 +53,7 @@
 	// setTimeout은 js에 있는 모든 문법들이 다 수행이 되고 난 다음에서야 수행이 됨
 	// i-0,1,2일때 다 들어갔다가 나왔다가 나중에서야 실행함
 	// 3번은 실행해야하고 0,1,2는 이미 지나갔기 때문에 3이 3번나온다
-	// 이런 문제를 해결하기 위해 closer를 사용
+	// 이런 문제를 해결하기 위해 closure를 사용
 	/* for(var i = 0; i < 3; i++){
 		setTimeout(function(){
 			alert(i);
